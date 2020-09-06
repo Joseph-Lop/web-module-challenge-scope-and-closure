@@ -122,8 +122,18 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, numOfIn) {
+  let plays = {
+    HomePoints: 0,
+    AwayPoints: 0
+  }
+  for (let i = 0; i < numOfIn; i++){
+    let points = [inning(), inning()]
+    plays.HomePoints += points[0];
+    plays.AwayPoints += points[1];
+    console.log(i+1 + "th inning: " + points[1] + " - " + points[0]);
+  }
+  console.log("Final Score: " + plays.AwayPoints + " - " + plays.HomePoints);
 }
 
-
+scoreboard("",inning,9);
